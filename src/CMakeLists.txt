@@ -1,0 +1,1 @@
+add_executable(raymond main.cc material/ray.cc material/ray.h)
