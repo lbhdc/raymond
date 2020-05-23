@@ -2,6 +2,8 @@
 #define RAYMOND_VECTOR_H
 
 #include <cmath>
+#include <istream>
+#include <ostream>
 
 namespace Math {
   struct Vector {
@@ -11,10 +13,6 @@ namespace Math {
 
     inline double length() const {
       return sqrt(this->dot(*this));
-    }
-
-    inline double square() const {
-      return x*x + y*y + z*z;
     }
 
     inline double dot(const Vector other) const {
@@ -52,7 +50,15 @@ namespace Math {
     return Vector{p.x * s, p.y * s, p.z * s};
   }
 
+  inline Vector operator*(double s, const Vector &p) {
+    return Vector{p.x * s, p.y * s, p.z * s};
+  }
+
   inline Vector operator/(const Vector &p, double s) {
+    return Vector{p.x / s, p.y / s, p.z / s};
+  }
+
+  inline Vector operator/(double s, const Vector &p) {
     return Vector{p.x / s, p.y / s, p.z / s};
   }
 
