@@ -1,4 +1,8 @@
-#include "ray.h"
+//
+// Created by monolith on 5/24/20.
+//
+
+#include "color.h"
 
 namespace Material {
   Color linear_interpolation(const Ray &r, const Color &from, const Color &to) {
