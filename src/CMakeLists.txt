@@ -1,8 +1,10 @@
 add_executable(
         raymond
         main.cc
+        math/ops.h
         material/ray.h
         material/sphere.h
         material/color.cc
         material/color.h
-)
+        material/sphere.cc
+        math/vector.cc)

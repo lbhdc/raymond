@@ -1,17 +1,13 @@
-//
-// Created by monolith on 5/24/20.
-//
-
 #include "color.h"
 
-namespace Material {
-  Color linear_interpolation(const Ray &r, const Color &from, const Color &to) {
-    auto uv = Math::unit_vector(r.direction);
+namespace material {
+  Color linearInterpolation(Ray &r, const Color &from, const Color &to) {
+    auto uv = math::unitVector(r.direction);
     auto t = 0.5 * (uv.y + 1.0);
     return (1.0-t)*from  + t*to;
   }
 
-  std::tuple<int, int, int>rgbColor(const Color &c) {
-    return {int(255.99*c.x), int(255.99*c.y), int(255.99*c.z)};
+  std::tuple<int, int, int> rgbColor(const Color &c) {
+    return {long(255.99*c.x), long(255.99*c.y), long(255.99*c.z)};
   };
 }
