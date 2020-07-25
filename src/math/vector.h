@@ -6,6 +6,7 @@
 #include <ostream>
 
 namespace math {
+  // TODO: should this be templated to make member types generic?
   struct Vector {
     double x;
     double y;
@@ -61,6 +62,8 @@ namespace math {
       return Vector{v1.x - v2.x, v1.y - v2.y, v1.z - v2.z};
     }
   };
+
+  Vector unit_vector(Vector &v);
 }
 
 #endif
