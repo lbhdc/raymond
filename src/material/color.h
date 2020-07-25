@@ -7,7 +7,7 @@
 namespace material {
   using Color = math::Vector;
   Color linearInterpolation(Ray &r, const Color &from, const Color &to);
-  std::tuple<int, int, int>rgbColor(const Color &c);
+  std::tuple<long, long, long>rgbColor(const Color &c);
 }
 
 #endif
