@@ -7,7 +7,7 @@ namespace math {
     return sqrt(dot(*this, *this));
   }
 
-  Vector unit_vector(Vector &v) {
+  Vector unitVector(Vector &v) {
     return v / v.length();
   }
 }

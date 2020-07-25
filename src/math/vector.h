@@ -63,7 +63,7 @@ namespace math {
     }
   };
 
-  Vector unit_vector(Vector &v);
+  Vector unitVector(Vector &v);
 }
 
 #endif
