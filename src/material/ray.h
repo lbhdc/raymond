@@ -4,15 +4,15 @@
 #include <tuple>
 #include "../math/vector.h"
 
-namespace Material {
+namespace material {
   struct Ray {
-    Math::Vector origin;
-    Math::Vector direction;
+    math::Vector origin;
+    math::Vector direction;
 
-    Math::Vector pointAtParameter(double scaler) const {
+    [[nodiscard]] constexpr math::Vector pointAtParameter(double scaler) const {
       return origin + direction * scaler;
     }
   };
 }
 
-#endif //RAYMOND_RAY_H
+#endif
